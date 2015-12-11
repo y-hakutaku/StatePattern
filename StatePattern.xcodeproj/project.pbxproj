@@ -15,6 +15,12 @@
 		0A77193E1C11DFC000C24E1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A77193C1C11DFC000C24E1F /* LaunchScreen.storyboard */; };
 		0A7719491C11DFC000C24E1F /* StatePatternTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7719481C11DFC000C24E1F /* StatePatternTests.m */; };
 		0A7719541C11DFC000C24E1F /* StatePatternUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7719531C11DFC000C24E1F /* StatePatternUITests.m */; };
+		0A7719631C11E50F00C24E1F /* SeasonState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7719621C11E50F00C24E1F /* SeasonState.m */; };
+		0A7719671C121DCA00C24E1F /* SpringState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7719661C121DCA00C24E1F /* SpringState.m */; };
+		0A77196A1C1221B100C24E1F /* StateContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7719691C1221B100C24E1F /* StateContext.m */; };
+		0A77196D1C12226000C24E1F /* SummerState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A77196C1C12226000C24E1F /* SummerState.m */; };
+		0AC7FFAC1C12B72000430AF0 /* FallState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7FFAB1C12B72000430AF0 /* FallState.m */; };
+		0AC7FFAF1C12B78200430AF0 /* WinterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7FFAE1C12B78200430AF0 /* WinterState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,18 @@
 		0A77194F1C11DFC000C24E1F /* StatePatternUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatePatternUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7719531C11DFC000C24E1F /* StatePatternUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatePatternUITests.m; sourceTree = "<group>"; };
 		0A7719551C11DFC000C24E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A7719611C11E50F00C24E1F /* SeasonState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeasonState.h; sourceTree = "<group>"; };
+		0A7719621C11E50F00C24E1F /* SeasonState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeasonState.m; sourceTree = "<group>"; };
+		0A7719651C121DCA00C24E1F /* SpringState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringState.h; sourceTree = "<group>"; };
+		0A7719661C121DCA00C24E1F /* SpringState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringState.m; sourceTree = "<group>"; };
+		0A7719681C1221B100C24E1F /* StateContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateContext.h; sourceTree = "<group>"; };
+		0A7719691C1221B100C24E1F /* StateContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateContext.m; sourceTree = "<group>"; };
+		0A77196B1C12226000C24E1F /* SummerState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SummerState.h; sourceTree = "<group>"; };
+		0A77196C1C12226000C24E1F /* SummerState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SummerState.m; sourceTree = "<group>"; };
+		0AC7FFAA1C12B72000430AF0 /* FallState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FallState.h; sourceTree = "<group>"; };
+		0AC7FFAB1C12B72000430AF0 /* FallState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FallState.m; sourceTree = "<group>"; };
+		0AC7FFAD1C12B78200430AF0 /* WinterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinterState.h; sourceTree = "<group>"; };
+		0AC7FFAE1C12B78200430AF0 /* WinterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinterState.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +119,7 @@
 		0A77192D1C11DFC000C24E1F /* StatePattern */ = {
 			isa = PBXGroup;
 			children = (
+				0A7719641C11E52300C24E1F /* State */,
 				0A7719311C11DFC000C24E1F /* AppDelegate.h */,
 				0A7719321C11DFC000C24E1F /* AppDelegate.m */,
 				0A7719341C11DFC000C24E1F /* ViewController.h */,
@@ -138,6 +157,26 @@
 				0A7719551C11DFC000C24E1F /* Info.plist */,
 			);
 			path = StatePatternUITests;
+			sourceTree = "<group>";
+		};
+		0A7719641C11E52300C24E1F /* State */ = {
+			isa = PBXGroup;
+			children = (
+				0A7719611C11E50F00C24E1F /* SeasonState.h */,
+				0A7719621C11E50F00C24E1F /* SeasonState.m */,
+				0A7719651C121DCA00C24E1F /* SpringState.h */,
+				0A7719661C121DCA00C24E1F /* SpringState.m */,
+				0A7719681C1221B100C24E1F /* StateContext.h */,
+				0A7719691C1221B100C24E1F /* StateContext.m */,
+				0A77196B1C12226000C24E1F /* SummerState.h */,
+				0A77196C1C12226000C24E1F /* SummerState.m */,
+				0AC7FFAA1C12B72000430AF0 /* FallState.h */,
+				0AC7FFAB1C12B72000430AF0 /* FallState.m */,
+				0AC7FFAD1C12B78200430AF0 /* WinterState.h */,
+				0AC7FFAE1C12B78200430AF0 /* WinterState.m */,
+			);
+			name = State;
+			path = States;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +311,13 @@
 			files = (
 				0A7719361C11DFC000C24E1F /* ViewController.m in Sources */,
 				0A7719331C11DFC000C24E1F /* AppDelegate.m in Sources */,
+				0AC7FFAF1C12B78200430AF0 /* WinterState.m in Sources */,
+				0A77196D1C12226000C24E1F /* SummerState.m in Sources */,
+				0A7719631C11E50F00C24E1F /* SeasonState.m in Sources */,
 				0A7719301C11DFC000C24E1F /* main.m in Sources */,
+				0A7719671C121DCA00C24E1F /* SpringState.m in Sources */,
+				0AC7FFAC1C12B72000430AF0 /* FallState.m in Sources */,
+				0A77196A1C1221B100C24E1F /* StateContext.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,9 +456,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = StatePattern/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "http---qiita.com-Yoshiyasu-Shirasawa.StatePattern";
+				PRODUCT_BUNDLE_IDENTIFIER = StatePattern;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -422,9 +469,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = StatePattern/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "http---qiita.com-Yoshiyasu-Shirasawa.StatePattern";
+				PRODUCT_BUNDLE_IDENTIFIER = StatePattern;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -496,6 +545,7 @@
 				0A77195A1C11DFC000C24E1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A77195B1C11DFC000C24E1F /* Build configuration list for PBXNativeTarget "StatePatternTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +554,7 @@
 				0A77195D1C11DFC000C24E1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A77195E1C11DFC000C24E1F /* Build configuration list for PBXNativeTarget "StatePatternUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +563,7 @@
 				0A7719601C11DFC000C24E1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
