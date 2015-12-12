@@ -17,16 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8N-fp-aKV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8N-fp-aKV">
                                 <rect key="frame" x="195" y="161" width="211" height="42"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="3r6-eo-roy"/>
+                                    <constraint firstAttribute="width" constant="211" id="VuG-13-ibD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXx-7O-YFB">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXx-7O-YFB">
                                 <rect key="frame" x="200" y="397" width="201" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="J6P-U3-2ME"/>
+                                </constraints>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="startChangeOfSeasonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dcm-Rz-Vhf"/>
@@ -35,6 +42,12 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P8N-fp-aKV" firstAttribute="centerX" secondItem="mXx-7O-YFB" secondAttribute="centerX" id="kZj-55-pvt"/>
+                            <constraint firstItem="P8N-fp-aKV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qmc-2i-Ozu"/>
+                            <constraint firstItem="P8N-fp-aKV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="141" id="w1n-mZ-FMd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mXx-7O-YFB" secondAttribute="bottom" constant="173" id="zKV-0H-o7A"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="currentSeasonNameLabel" destination="P8N-fp-aKV" id="j37-3R-Gsb"/>
