@@ -1,5 +1,5 @@
 //
-//  AnimalState.h
+//  SeasonState.h
 //  StatePattern
 //
 //  Created by y.hakutaku on 2015/12/04.

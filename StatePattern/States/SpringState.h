@@ -1,5 +1,5 @@
 //
-//  AnimalState.h
+//  SpringState.h
 //  StatePattern
 //
 //  Created by 白澤 義康 on 2015/12/04.

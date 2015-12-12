@@ -1,5 +1,5 @@
 //
-//  AnimalState.m
+//  SeasonState.m
 //  StatePattern
 //
 //  Created by y.hakutaku on 2015/12/04.
