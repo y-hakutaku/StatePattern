@@ -7,12 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StateContext.h"
 
-@class ViewController;
-@protocol SeasonStateDelegate <NSObject>
-@end
-
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<StateContextDelegate>
 
 
 @end

@@ -33,7 +33,9 @@
 	return @"冬";
 }
 
-- (SeasonState*)chanegeNextSeason{
-	return [SpringState sharedInstance];
+- (void)chanegeNextSeason{
+	if([self.delegate respondsToSelector:@selector(currentSeasonText:currentSeasonState:)]){
+		[self.delegate currentSeasonText:@"冬" currentSeasonState:[SpringState sharedInstance]];
+	};
 }
 @end

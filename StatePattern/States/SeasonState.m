@@ -8,8 +8,9 @@
 
 #import "SeasonState.h"
 
+
 /// stateクラスの基底クラス
-@interface SeasonState ()<SeasonState>
+@interface SeasonState ()
 
 @end
 
@@ -42,10 +43,9 @@
 	return nil;
 }
 
-- (SeasonState*)chanegeNextSeason{
+- (void)chanegeNextSeason{
 	[NSException raise:NSInternalInconsistencyException
 				format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)];
-	return nil;
 }
 
 @end

@@ -7,13 +7,7 @@
 //
 
 #import "StateContext.h"
-#import "SeasonState.h"
 #import "SpringState.h"
-
-@interface StateContext()
-@property (nonatomic,weak)SeasonState* currentSeasonState;
-@end
-
 
 @implementation StateContext
 
@@ -23,7 +17,7 @@
 	dispatch_once(&onceToken, ^{
 		_instance = [[StateContext alloc] initInstance];
 	});
-	
+
 	return _instance;
 }
 
@@ -31,6 +25,7 @@
 	self = [super init];
 	if (self) {
 		self.currentSeasonState = [SpringState initialState];
+		
 	}
 	return self;
 }
@@ -39,8 +34,16 @@
 	return [_currentSeasonState currentSeasonText];
 }
 
-- (void) changeOfSeasons{
-	_currentSeasonState = [_currentSeasonState chanegeNextSeason];
+- (void) changeOfSeasons {
+	self.currentSeasonState.delegate = self;
+	[self.currentSeasonState chanegeNextSeason];
 }
 
+#pragma SeasonState delegate
+- (void)currentSeasonText:(NSString*)currentSeasonText currentSeasonState:(SeasonState*)currentSeasonState{
+	self.currentSeasonState = currentSeasonState;
+	if ([self.delegate respondsToSelector:@selector(currentSeasonText:)]) {
+		[self.delegate currentSeasonText:currentSeasonText];
+	}
+};
 @end

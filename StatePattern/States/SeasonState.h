@@ -8,18 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class SeasonState;
+@protocol SeasonStateDelegate <NSObject>
+@required
+- (void)currentSeasonText:(NSString*)currentSeasonText currentSeasonState:(SeasonState*)currentSeasonState;
+@end
+
 @interface SeasonState : NSObject
 + (instancetype) sharedInstance;
 - (NSString*)currentSeasonText;
-- (SeasonState*)chanegeNextSeason;
+- (void)chanegeNextSeason;
 + (instancetype) initialState;
+@property (nonatomic,weak) id <SeasonStateDelegate>delegate;
 @end
-
-@protocol SeasonState <NSObject>
-@required
-- (NSString*)currentSeasonText;
-@optional
-+ (instancetype) initialState;
-
-@end
-

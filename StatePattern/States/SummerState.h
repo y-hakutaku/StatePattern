@@ -8,6 +8,6 @@
 
 #import "SeasonState.h"
 
-@interface SummerState : SeasonState <SeasonState>
+@interface SummerState : SeasonState
 
 @end
