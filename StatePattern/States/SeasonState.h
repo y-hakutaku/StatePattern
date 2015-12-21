@@ -10,14 +10,13 @@
 
 @class SeasonState;
 @protocol SeasonStateDelegate <NSObject>
-@required
 - (void)currentSeasonText:(NSString*)currentSeasonText currentSeasonState:(SeasonState*)currentSeasonState;
 @end
 
 @interface SeasonState : NSObject
 + (instancetype) sharedInstance;
 - (NSString*)currentSeasonText;
-- (void)chanegeNextSeason;
 + (instancetype) initialState;
+- (void)changeNextSeason;
 @property (nonatomic,weak) id <SeasonStateDelegate>delegate;
 @end

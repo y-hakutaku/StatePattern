@@ -2,8 +2,8 @@
 //  FallState.m
 //  StatePattern
 //
-//  Created by 白澤 義康 on 2015/12/05.
-//  Copyright © 2015年 白澤 義康. All rights reserved.
+//  Created by y.hakutaku on 2015/12/04.
+//  Copyright © 2015年 y.hakutaku All rights reserved.
 //
 
 #import "FallState.h"
@@ -33,9 +33,9 @@
 	return @"秋";
 }
 
-- (void)chanegeNextSeason{
+- (void)changeNextSeason {
 	if([self.delegate respondsToSelector:@selector(currentSeasonText:currentSeasonState:)]){
-		[self.delegate currentSeasonText:@"秋" currentSeasonState:[WinterState sharedInstance]];
+		[self.delegate currentSeasonText:[self currentSeasonText] currentSeasonState:[WinterState sharedInstance]];
 	};
 }
 @end

@@ -11,8 +11,6 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *currentSeasonNameLabel;
 - (IBAction)startChangeOfSeasonsAction:(id)sender;
-
-
 @end
 
 @implementation ViewController
@@ -20,7 +18,7 @@
 #pragma View Life Cycle
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	//[StateContext sharedInstance].delegate = self;
+	[StateContext sharedInstance].delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,9 +26,7 @@
 }
 
 #pragma UI Actions
-
 - (IBAction)startChangeOfSeasonsAction:(id)sender {
-	[StateContext sharedInstance].delegate = self;
 	[[StateContext sharedInstance] changeOfSeasons];
 }
 

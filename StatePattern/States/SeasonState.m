@@ -8,12 +8,6 @@
 
 #import "SeasonState.h"
 
-
-/// stateクラスの基底クラス
-@interface SeasonState ()
-
-@end
-
 @implementation SeasonState
 
 + (instancetype) sharedInstance {
@@ -33,7 +27,7 @@
 
 + (instancetype) initialState {
 	[NSException raise:NSInternalInconsistencyException
-				format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)];
+				format:@"This Is Optional method You must override %@ in a initialStateClass", NSStringFromSelector(_cmd)];
 	return nil;
 }
 
@@ -43,7 +37,7 @@
 	return nil;
 }
 
-- (void)chanegeNextSeason{
+- (void)changeNextSeason {
 	[NSException raise:NSInternalInconsistencyException
 				format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)];
 }

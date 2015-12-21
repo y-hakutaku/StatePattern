@@ -2,8 +2,8 @@
 //  SpringState.m
 //  StatePattern
 //
-//  Created by 白澤 義康 on 2015/12/04.
-//  Copyright © 2015年 白澤 義康. All rights reserved.
+//  Created by y.hakutaku on 2015/12/04.
+//  Copyright © 2015年 y.hakutaku All rights reserved.
 //
 
 #import "SpringState.h"
@@ -37,9 +37,9 @@
 	return @"春";
 }
 
-- (void)chanegeNextSeason{
-	if([self.delegate respondsToSelector:@selector(currentSeasonText:currentSeasonState:)]){
-		[self.delegate currentSeasonText:@"春" currentSeasonState:[SummerState sharedInstance]];
+- (void)changeNextSeason {
+	if([self.delegate respondsToSelector:@selector(currentSeasonText:currentSeasonState:)]) {
+		[self.delegate currentSeasonText:[self currentSeasonText] currentSeasonState:[SummerState sharedInstance]];
 	};
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A24045C1C27C80300A7BEF1 /* IdleState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A24045B1C27C80300A7BEF1 /* IdleState.m */; };
 		0A7719301C11DFC000C24E1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A77192F1C11DFC000C24E1F /* main.m */; };
 		0A7719331C11DFC000C24E1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7719321C11DFC000C24E1F /* AppDelegate.m */; };
 		0A7719361C11DFC000C24E1F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7719351C11DFC000C24E1F /* ViewController.m */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A24045A1C27C80300A7BEF1 /* IdleState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdleState.h; sourceTree = "<group>"; };
+		0A24045B1C27C80300A7BEF1 /* IdleState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdleState.m; sourceTree = "<group>"; };
 		0A77192B1C11DFC000C24E1F /* StatePattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StatePattern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A77192F1C11DFC000C24E1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0A7719311C11DFC000C24E1F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -174,6 +177,8 @@
 				0AC7FFAB1C12B72000430AF0 /* FallState.m */,
 				0AC7FFAD1C12B78200430AF0 /* WinterState.h */,
 				0AC7FFAE1C12B78200430AF0 /* WinterState.m */,
+				0A24045A1C27C80300A7BEF1 /* IdleState.h */,
+				0A24045B1C27C80300A7BEF1 /* IdleState.m */,
 			);
 			name = State;
 			path = States;
@@ -316,6 +321,7 @@
 				0A7719631C11E50F00C24E1F /* SeasonState.m in Sources */,
 				0A7719301C11DFC000C24E1F /* main.m in Sources */,
 				0A7719671C121DCA00C24E1F /* SpringState.m in Sources */,
+				0A24045C1C27C80300A7BEF1 /* IdleState.m in Sources */,
 				0AC7FFAC1C12B72000430AF0 /* FallState.m in Sources */,
 				0A77196A1C1221B100C24E1F /* StateContext.m in Sources */,
 			);

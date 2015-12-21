@@ -2,8 +2,8 @@
 //  StateContext.m
 //  StatePattern
 //
-//  Created by 白澤 義康 on 2015/12/04.
-//  Copyright © 2015年 白澤 義康. All rights reserved.
+//  Created by y.hakutaku on 2015/12/04.
+//  Copyright © 2015年 y.hakutaku All rights reserved.
 //
 
 #import "StateContext.h"
@@ -36,14 +36,14 @@
 
 - (void) changeOfSeasons {
 	self.currentSeasonState.delegate = self;
-	[self.currentSeasonState chanegeNextSeason];
+	[self.currentSeasonState changeNextSeason];
 }
 
 #pragma SeasonState delegate
-- (void)currentSeasonText:(NSString*)currentSeasonText currentSeasonState:(SeasonState*)currentSeasonState{
-	self.currentSeasonState = currentSeasonState;
+- (void)currentSeasonText:(NSString*)currentSeasonText currentSeasonState:(SeasonState*)currentSeasonState {
 	if ([self.delegate respondsToSelector:@selector(currentSeasonText:)]) {
 		[self.delegate currentSeasonText:currentSeasonText];
+		self.currentSeasonState = currentSeasonState;
 	}
 };
 @end
