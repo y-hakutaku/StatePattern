@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SeasonState.h"
+#import "ISeasonState.h"
 
 @class StateContext;
 @protocol StateContextDelegate <NSObject>
@@ -19,7 +19,7 @@
 + (instancetype) sharedInstance;
 - (NSString*)seasonText;
 - (void) changeOfSeasons;
-@property (nonatomic,weak)SeasonState * currentSeasonState;
+@property (nonatomic,weak)ISeasonState <SeasonStateProtocol>* currentSeasonState;
 @property (nonatomic,weak) id<StateContextDelegate> delegate;
 @end
 

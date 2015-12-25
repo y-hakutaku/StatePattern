@@ -6,8 +6,8 @@
 //  Copyright © 2015年 y.hakutaku All rights reserved.
 //
 
-#import "SeasonState.h"
+#import "ISeasonState.h"
 
-@interface SpringState : SeasonState
+@interface SpringState : ISeasonState <SeasonStateProtocol>
 
 @end

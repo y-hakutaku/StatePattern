@@ -26,18 +26,21 @@
 	return self;
 }
 
+- (void)startChangeOfSeasons {
+	if([self.delegate respondsToSelector:@selector(currentSeasonText:)]) {
+		[self.delegate currentSeasonText:[self currentStateText]];
+	}
+	
+	if([self.delegate respondsToSelector:@selector(updateSeasonState:)]) {
+		[self.delegate updateSeasonState:[SpringState sharedInstance]];
+		[[SpringState sharedInstance] resumeState];
+	}
+}
 
-- (NSString*)currentSeasonText {
-	return nil;
-}
-+ (instancetype) initialState {
-	return [IdleState sharedInstance];
-}
-- (void)progress {
-	if([self.delegate respondsToSelector:@selector(currentSeasonText:currentSeasonState:)]) {
-		[self.delegate currentSeasonText:[self currentSeasonText] currentSeasonState:[SpringState sharedInstance]];
-		[[SpringState sharedInstance] changeNextSeason];
-	};
+- (void)resumeState {
+	if ([self.delegate respondsToSelector:@selector(currentSeasonText:)]) {
+		[self.delegate currentSeasonText:[self currentStateText]];
+	}
 }
 
 @end

@@ -23,19 +23,27 @@
 
 - (id)initInstance {
 	self = [super init];
-	if (self) {
-		// do something
-	}
 	return self;
 }
 
--(NSString *)currentSeasonText {
+-(NSString *)currentStateText {
 	return @"秋";
 }
 
-- (void)changeNextSeason {
-	if([self.delegate respondsToSelector:@selector(currentSeasonText:currentSeasonState:)]){
-		[self.delegate currentSeasonText:[self currentSeasonText] currentSeasonState:[WinterState sharedInstance]];
+- (void)resumeState {
+	if([self.delegate respondsToSelector:@selector(currentSeasonText:)]) {
+		[self.delegate currentSeasonText:[self currentStateText]];
 	};
+	[self progressState];
+}
+
+- (void)progressState {
+	__weak typeof (self) wSelf = self;
+	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2.0 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+		if([wSelf.delegate respondsToSelector:@selector(updateSeasonState:)]) {
+			[wSelf.delegate updateSeasonState:[WinterState sharedInstance]];
+			[[WinterState sharedInstance] resumeState];
+		}
+	});
 }
 @end

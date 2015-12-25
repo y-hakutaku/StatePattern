@@ -6,8 +6,8 @@
 //  Copyright © 2015年 y.hakutaku All rights reserved.
 //
 
-#import "SeasonState.h"
+#import "ISeasonState.h"
 
-@interface IdleState : SeasonState
+@interface IdleState : ISeasonState <SeasonStateProtocol>
 
 @end

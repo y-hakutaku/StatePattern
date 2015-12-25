@@ -7,7 +7,7 @@
 //
 
 #import "StateContext.h"
-#import "SpringState.h"
+#import "IdleState.h"
 
 @implementation StateContext
 
@@ -24,26 +24,33 @@
 - (id)initInstance {
 	self = [super init];
 	if (self) {
-		self.currentSeasonState = [SpringState initialState];
-		
+		self.currentSeasonState = [IdleState sharedInstance];		
 	}
 	return self;
 }
 
 - (NSString*)seasonText {
-	return [_currentSeasonState currentSeasonText];
+	return [_currentSeasonState currentStateText];
 }
 
 - (void) changeOfSeasons {
-	self.currentSeasonState.delegate = self;
-	[self.currentSeasonState changeNextSeason];
+	if ([self.currentSeasonState isMemberOfClass:[IdleState class]]) {
+		self.currentSeasonState.delegate = self;
+		[self.currentSeasonState startChangeOfSeasons];
+	} else {
+		NSLog(@"Current State is %@ could not start change of season",[self.currentSeasonState class]);
+	}
 }
 
 #pragma SeasonState delegate
-- (void)currentSeasonText:(NSString*)currentSeasonText currentSeasonState:(SeasonState*)currentSeasonState {
+- (void)updateSeasonState:(ISeasonState<SeasonStateProtocol>*)currentSeasonState {
+	self.currentSeasonState = currentSeasonState;
+	self.currentSeasonState.delegate = self;
+}
+
+- (void)currentSeasonText:(NSString*)currentSeasonText {
 	if ([self.delegate respondsToSelector:@selector(currentSeasonText:)]) {
 		[self.delegate currentSeasonText:currentSeasonText];
-		self.currentSeasonState = currentSeasonState;
 	}
 };
 @end

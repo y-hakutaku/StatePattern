@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A24045C1C27C80300A7BEF1 /* IdleState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A24045B1C27C80300A7BEF1 /* IdleState.m */; };
+		0A4623441C2D1C55002F55DA /* IdleState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4623431C2D1C55002F55DA /* IdleState.m */; };
 		0A7719301C11DFC000C24E1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A77192F1C11DFC000C24E1F /* main.m */; };
 		0A7719331C11DFC000C24E1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7719321C11DFC000C24E1F /* AppDelegate.m */; };
 		0A7719361C11DFC000C24E1F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7719351C11DFC000C24E1F /* ViewController.m */; };
@@ -16,7 +16,7 @@
 		0A77193E1C11DFC000C24E1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A77193C1C11DFC000C24E1F /* LaunchScreen.storyboard */; };
 		0A7719491C11DFC000C24E1F /* StatePatternTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7719481C11DFC000C24E1F /* StatePatternTests.m */; };
 		0A7719541C11DFC000C24E1F /* StatePatternUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7719531C11DFC000C24E1F /* StatePatternUITests.m */; };
-		0A7719631C11E50F00C24E1F /* SeasonState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7719621C11E50F00C24E1F /* SeasonState.m */; };
+		0A7719631C11E50F00C24E1F /* ISeasonState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7719621C11E50F00C24E1F /* ISeasonState.m */; };
 		0A7719671C121DCA00C24E1F /* SpringState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7719661C121DCA00C24E1F /* SpringState.m */; };
 		0A77196A1C1221B100C24E1F /* StateContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7719691C1221B100C24E1F /* StateContext.m */; };
 		0A77196D1C12226000C24E1F /* SummerState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A77196C1C12226000C24E1F /* SummerState.m */; };
@@ -42,8 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A24045A1C27C80300A7BEF1 /* IdleState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdleState.h; sourceTree = "<group>"; };
-		0A24045B1C27C80300A7BEF1 /* IdleState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdleState.m; sourceTree = "<group>"; };
+		0A4623421C2D1C55002F55DA /* IdleState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdleState.h; sourceTree = "<group>"; };
+		0A4623431C2D1C55002F55DA /* IdleState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdleState.m; sourceTree = "<group>"; };
 		0A77192B1C11DFC000C24E1F /* StatePattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StatePattern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A77192F1C11DFC000C24E1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0A7719311C11DFC000C24E1F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,8 +60,8 @@
 		0A77194F1C11DFC000C24E1F /* StatePatternUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatePatternUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7719531C11DFC000C24E1F /* StatePatternUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatePatternUITests.m; sourceTree = "<group>"; };
 		0A7719551C11DFC000C24E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A7719611C11E50F00C24E1F /* SeasonState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeasonState.h; sourceTree = "<group>"; };
-		0A7719621C11E50F00C24E1F /* SeasonState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeasonState.m; sourceTree = "<group>"; };
+		0A7719611C11E50F00C24E1F /* ISeasonState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISeasonState.h; sourceTree = "<group>"; };
+		0A7719621C11E50F00C24E1F /* ISeasonState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISeasonState.m; sourceTree = "<group>"; };
 		0A7719651C121DCA00C24E1F /* SpringState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringState.h; sourceTree = "<group>"; };
 		0A7719661C121DCA00C24E1F /* SpringState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringState.m; sourceTree = "<group>"; };
 		0A7719681C1221B100C24E1F /* StateContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateContext.h; sourceTree = "<group>"; };
@@ -165,8 +165,8 @@
 		0A7719641C11E52300C24E1F /* State */ = {
 			isa = PBXGroup;
 			children = (
-				0A7719611C11E50F00C24E1F /* SeasonState.h */,
-				0A7719621C11E50F00C24E1F /* SeasonState.m */,
+				0A7719611C11E50F00C24E1F /* ISeasonState.h */,
+				0A7719621C11E50F00C24E1F /* ISeasonState.m */,
 				0A7719651C121DCA00C24E1F /* SpringState.h */,
 				0A7719661C121DCA00C24E1F /* SpringState.m */,
 				0A7719681C1221B100C24E1F /* StateContext.h */,
@@ -177,8 +177,8 @@
 				0AC7FFAB1C12B72000430AF0 /* FallState.m */,
 				0AC7FFAD1C12B78200430AF0 /* WinterState.h */,
 				0AC7FFAE1C12B78200430AF0 /* WinterState.m */,
-				0A24045A1C27C80300A7BEF1 /* IdleState.h */,
-				0A24045B1C27C80300A7BEF1 /* IdleState.m */,
+				0A4623421C2D1C55002F55DA /* IdleState.h */,
+				0A4623431C2D1C55002F55DA /* IdleState.m */,
 			);
 			name = State;
 			path = States;
@@ -318,10 +318,10 @@
 				0A7719331C11DFC000C24E1F /* AppDelegate.m in Sources */,
 				0AC7FFAF1C12B78200430AF0 /* WinterState.m in Sources */,
 				0A77196D1C12226000C24E1F /* SummerState.m in Sources */,
-				0A7719631C11E50F00C24E1F /* SeasonState.m in Sources */,
+				0A7719631C11E50F00C24E1F /* ISeasonState.m in Sources */,
 				0A7719301C11DFC000C24E1F /* main.m in Sources */,
 				0A7719671C121DCA00C24E1F /* SpringState.m in Sources */,
-				0A24045C1C27C80300A7BEF1 /* IdleState.m in Sources */,
+				0A4623441C2D1C55002F55DA /* IdleState.m in Sources */,
 				0AC7FFAC1C12B72000430AF0 /* FallState.m in Sources */,
 				0A77196A1C1221B100C24E1F /* StateContext.m in Sources */,
 			);
